@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Stacja paliw</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styl2.css'>
+    <!-- https://egzamin-informatyk.pl/arkusz-praktyczny-inf03-2022-06-02/#google_vignette -->
+    <script>
+        function licz()
+        {
+            let l1=parseFloat(formularz.l1.value);
+            let l2=parseFloat(formularz.l2.value);
+            if(l1==1)
+            {
+                document.getElementById('wynik').innerHTML = "koszt paliwa: "+(l2*4)+" zł"
+            }
+            if(l1==2)
+            {
+                document.getElementById('wynik').innerHTML = "koszt paliwa: "+(l2*3.5)+" zł"
+                
+            }
+            if(l1!=1&&l1!=2)
+            {
+                document.getElementById('wynik').innerHTML = "koszt paliwa: 0 zł"
+            }
+        }
+    </script>
+</head>
+<body>
+    <header id="baner"><h1>Całodobowa stacja paliw</h1></header>
+    <section id="menu">
+        <div id="ikony">
+            <a href="stacja.html"><img src="home.png"></a> 
+            <a href="obliczenia.html"><img src="znak.png"></a> 
+            <a href="kwerendy.txt">Pobierz dokumenty</a>
+        </div>
+    </section>
+    <div id="blok">
+        <section id="bl">
+            <form name="formularz">
+                <h2 id="ngl">Orientacyjny koszt paliwa</h2>
+                Rodzaj paliwa (1-benzyna, 2-olej napędowy):<br> <input type="number" name="l1"><br>
+                Ile litrów:<br> <input type="number" name="l2"><br>
+                <input type="button" value="oblicz" onclick="licz()"><br>
+                <div id="wynik"> </div>
+            </form>
+            
+        </section>
+        <aside id="bp">
+            <img id="zdj"src="samochod.png" alt="samochód">
+        </aside>
+    </div>
+    <footer>
+        <p>Stronę opracował: 000000000000</p>
+    </footer>
+</body>
+</html>
